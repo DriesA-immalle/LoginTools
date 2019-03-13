@@ -62,7 +62,7 @@ if __name__ == '__main__':
   cursor = db.Cursor()
   
   #For this example column1 is set to UNIQUE and one of the records already contains 'value1'
-  cursor.execute('INSERT OR IGNORE INTO table(column1, column2) VALUES('value1', 'value2')
+  logintools.cursor.execute('INSERT OR IGNORE INTO table(column1, column2) VALUES('value1', 'value2')
   db.commit()
   
   ignored = logintools.checkIgnored()
