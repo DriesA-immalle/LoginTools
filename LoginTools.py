@@ -23,5 +23,13 @@ class LoginTools():
         else:
             return False
 
+    def clearTable(self, table):
+        self.cursor.execute('DELETE FROM ' + table)
+        self.db.commit()
+
+    def clearWithCondition(self, table, column, condition):
+        self.cursor.execute('DELETE FROM ' + table + ' WHERE ' + column + '="' + condition + '"')
+        self.db.commit()
+
 if __name__ == "__main__":
     logintools = LoginTools('TestDB')
