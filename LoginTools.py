@@ -31,5 +31,15 @@ class LoginTools():
         self.cursor.execute('DELETE FROM ' + table + ' WHERE ' + column + '="' + condition + '"')
         self.db.commit()
 
+    def totalRecords(self, table):
+        self.cursor.execute('SELECT * FROM ' + table)
+        records = self.cursor.fetchall()
+        return len(records)
+
+    def totalRecordsWithCondition(self, table, column, condition):
+        self.cursor.execute('SELECT * FROM ' + table + ' WHERE ' + column + '="' + condition + '"')
+        records = self.cursor.fetchall()
+        return len(records)
+
 if __name__ == "__main__":
     logintools = LoginTools('TestDB')
