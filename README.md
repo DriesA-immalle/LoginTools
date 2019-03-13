@@ -1,6 +1,10 @@
 # LoginTools
 Python Library with various methods to assist with login
 
+---
+***Warning Do not use non-verified user input in this library! Various methods are not SQL-injection proof!***
+---
+
 ## Tree for this example
 ```
 - PythonLogin
